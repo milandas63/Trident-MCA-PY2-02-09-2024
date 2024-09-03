@@ -824,7 +824,19 @@ Odia
 English
 No more data in list
 
-    =   ASSIGNMENT:
+    =   CLASSWORK:
+        Write a program to print the following figure:
+                          1        
+                         121       
+                        12321      
+                       1234321     
+                      123454321    
+                     12345654321   
+                    1234567654321  
+                   123456787654321 
+                  12345678987654321
+
+    =   ASSIGNMENT-1:
         Write a program to print the following figure:
                          *         
                         * *        
@@ -837,4 +849,14 @@ No more data in list
                  *               * 
                 *******************
 
-    =   
+    =   ASSIGNMENT-2:
+        Write a program to print the following figure:
+                         1         
+                        212        
+                       32123       
+                      4321234      
+                     543212345     
+                    65432123456    
+                   7654321234567   
+                  876543212345678  
+                 98765432123456789 
