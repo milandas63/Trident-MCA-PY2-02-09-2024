@@ -1,4 +1,4 @@
-    spaces = 40
+spaces = 40
 stars = 1
 for i in range(0,19):
     for j in range(0, spaces):
@@ -12,3 +12,15 @@ for i in range(0,19):
     else:
         spaces = spaces+1
         stars = stars-2
+
+
+
+OR
+
+
+
+n=int(input('Enter n value:'))
+for i in range(n):
+    print(' '*(n-i-1)+'* '*(i+1))
+for i in range(n-1):
+    print(' '*(i+1)+'* '*(n-i-1))    
