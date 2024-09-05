@@ -1,0 +1,2 @@
+#write a program that prints "Hello World" in the screen
+print("Hello World")
