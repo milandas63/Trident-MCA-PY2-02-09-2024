@@ -23,3 +23,18 @@ for i in range (0,11):
         print(chr(96+j),end=" ")
     print()
     space-=1
+
+Daily assignment from question(4)
+----------------------------------
+n=int(input("Enter the term:"))
+print(n*(n+1)//2)
+
+Daily assignment from question(5)
+----------------------------------
+n1=int(input("Enter the Fisrt Number:"))
+n2=int(input("Enter the second Number:"))
+print("Before swap:",n1,n2)
+n1=n1+n2
+n2=n1-n2
+n1=n1-n2
+print("after swap:",n1,n2)
