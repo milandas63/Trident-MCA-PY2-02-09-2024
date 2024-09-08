@@ -1,4 +1,8 @@
+assignment-01
+-------------------------
 
+
+#frequency of each element
 
 str=input("Enter the word:")
 for i in range(0,len(str)):
