@@ -1,1 +1,17 @@
+sentence = "Quick brown fox jumps over the lazy dogs"
+vowels = "aeiouAEIOU"
+count = 0
 
+for i in sentence:
+    for j in vowels:
+        if i==j:
+            count+=1
+print("Vowels=",count)
+
+Daily assignments from question:(3)
+-------------------------------------
+name=input("Enter Your Name:")
+if name=="Alice" or name=="Bob":
+    print("Hyy",name,"Happy Birthday!!!")
+else:
+    print("Invalid Name")
