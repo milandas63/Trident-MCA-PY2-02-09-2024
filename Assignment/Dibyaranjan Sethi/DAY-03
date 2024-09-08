@@ -8,6 +8,9 @@ for i in sentence:
             count+=1
 print("Vowels=",count)
 
+
+
+
 Daily assignments from question:(3)
 -------------------------------------
 name=input("Enter Your Name:")
