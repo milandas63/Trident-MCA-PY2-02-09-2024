@@ -12,6 +12,11 @@ for i in range(0,len(str)):
             count=count+1
     if str[i] not in str[:i]:
         print(str[i],"=",count)
+
+
+
+
+
     
 assignment-02
 ---------------------------
@@ -27,12 +32,17 @@ for i in range (0,11):
     print()
     space-=1
 
-Daily assignment from question(4)
+
+
+
+
+
+Daily assignment from question(3)
 ----------------------------------
 n=int(input("Enter the term:"))
 print(n*(n+1)//2)
 
-Daily assignment from question(5)
+Daily assignment from question(4)
 ----------------------------------
 n1=int(input("Enter the Fisrt Number:"))
 n2=int(input("Enter the second Number:"))
