@@ -1,1 +1,2 @@
-
+n=int(input("Enter the term:"))
+print(n*(n+1)//2)
