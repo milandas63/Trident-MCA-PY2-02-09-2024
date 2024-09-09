@@ -1,6 +1,4 @@
 assignment-01
--------------------------
-
 
 #frequency of each element
 
@@ -19,7 +17,7 @@ for i in range(0,len(str)):
 
     
 assignment-02
----------------------------
+
 #alphabets pyramid
 space=20
 for i in range (0,11):
@@ -37,13 +35,12 @@ for i in range (0,11):
 
 
 
-Daily assignment from question(3)
-----------------------------------
-n=int(input("Enter the term:"))
-print(n*(n+1)//2)
 
-Daily assignment from question(4)
-----------------------------------
+
+
+
+Daily assignment from question(3)
+
 n1=int(input("Enter the Fisrt Number:"))
 n2=int(input("Enter the second Number:"))
 print("Before swap:",n1,n2)
