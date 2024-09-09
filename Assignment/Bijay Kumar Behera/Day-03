@@ -1,0 +1,7 @@
+Question-3
+-------------------------
+name=input("Enter the name to greet him/her:")
+if name=="Alice" or name=="Bob":
+    print("Happy Birthday",name)
+else:
+    print("Invalid Details")
