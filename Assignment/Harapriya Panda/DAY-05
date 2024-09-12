@@ -1,0 +1,7 @@
+n1=int(input("Enter the Fisrt Number:"))
+n2=int(input("Enter the second Number:"))
+print("Before swap:",n1,n2)
+n1=n1+n2
+n2=n1-n2
+n1=n1-n2
+print("after swap:",n1,n2)
