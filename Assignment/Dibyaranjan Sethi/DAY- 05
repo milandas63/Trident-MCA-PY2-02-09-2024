@@ -18,3 +18,7 @@ else:
 
 
 task - 2
+sum of natural no
+
+n=int(input("Enter the term:"))
+print(n*(n+1)//2)
