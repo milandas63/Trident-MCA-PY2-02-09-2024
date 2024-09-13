@@ -1,0 +1,10 @@
+# print the series 1,3,5,11,21,....upto 10th term.
+
+
+n=1
+for i in range(1,11):
+    if i%2==0:
+        n=n*2+1
+    else:
+        n=n*2-1
+    print(n,end=" ")
