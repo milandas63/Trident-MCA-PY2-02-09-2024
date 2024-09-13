@@ -1653,3 +1653,15 @@ No more data in list
         |  1 | Gopinath Ojha | 2004-11-25 | M      |
         |  2 | Abinash Patra | 2003-01-21 | M      |
         +----+---------------+------------+--------+
+
+        UPDATE student SET name='Priyadarsini Mohapatra', dob='2004-02-21', gender='F' WHERE id=3;
+        +----+------------------------+------------+--------+
+        | id | name                   | dob        | gender |
+        +----+------------------------+------------+--------+
+        |  1 | Gopinath Ojha          | 2004-11-25 | M      |
+        |  2 | Abinash Patra          | 2003-01-21 | M      |
+        |  3 | Priyadarsini Mohapatra | 2004-02-21 | F      |
+        +----+------------------------+------------+--------+
+
+    =   ASSIGNMENT:
+        Create 3-4 tables for each entity and insert minimum 10 rows in each table.
