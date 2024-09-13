@@ -1,0 +1,48 @@
+start=2
+end=30
+def padl(n,l):
+    buf=str(n)
+    for i in range(len(buf),l):
+        buf=" "+buf
+    return buf
+
+for i in range(start,end+1,5):
+    for j in range(1,11):
+        for k in range(i,i+5):
+            if k>end:
+                break
+            print(padl(k,2),"x",padl(j,2),"=",padl((j*k),3)," ",end='')
+        print()
+    print()
+print()   
+
+
+----------------------------OR-------------------------------------------
+
+
+start=2
+end=10
+for i in range(start,end+1,5):
+    for j in range(1,11):
+        for k in range(i,i+5):
+            if k>end:
+                break
+            print(str(k).rjust(2),"x",str(j).rjust(2),"=",str(j*k).rjust(3),end="  ")
+        print()
+    print()
+print() 
+
+
+-----------------------------------OR---------------------------------------------
+
+start=2
+end=10
+for i in range(start,end+1,5):
+    for j in range(1,11):
+        for k in range(i,i+5):
+            if k>end:
+                break
+            print(str(k).zfill(2),"x",str(j).zfill(2),"=",str(j*k).zfill(3),end=" ")
+        print()
+    print()
+print() 
