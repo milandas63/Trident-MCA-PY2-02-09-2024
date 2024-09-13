@@ -25,7 +25,7 @@ Python is a widely-used, compiled and interpreted, garbage-collected,
 high-level programming language and purely object-oriented programming
 language that supports procedural, object-oriented, and functional
 programming with dynamic semantics, used for general-purpose programming.
-It’s everywhere, and people use numerous Python-powered devices on a daily
+Itâ€™s everywhere, and people use numerous Python-powered devices on a daily
 basis, whether they realize it or not.
 
 ----------------------------------------------------------------------------------
@@ -1136,14 +1136,14 @@ No more data in list
             x, y, z = fruits
 
     =   Python print() Function Syntax 
-        Syntax : print(value(s), sep= ‘ ’, end = ‘\n’, file=file, flush=flush)
+        Syntax : print(value(s), sep= â€˜ â€™, end = â€˜\nâ€™, file=file, flush=flush)
 
         Parameters: 
             value(s): Any value, and as many as you like. Will be converted to a string
                       before printed
-            sep=’separator’: (Optional) Specify how to separate the objects, if there is
-                      more than one.Default :’ ‘
-            end=’end’: (Optional) Specify what to print at the end.Default : ‘\n’
+            sep=â€™separatorâ€™: (Optional) Specify how to separate the objects, if there is
+                      more than one.Default :â€™ â€˜
+            end=â€™endâ€™: (Optional) Specify what to print at the end.Default : â€˜\nâ€™
             file:      (Optional) An object with a write method. 
                        Default: sys.stdout
             flush:     (Optional) A Boolean, specifying if the output is flushed (True) 
@@ -1353,7 +1353,7 @@ No more data in list
         The do...while loop doesn't exists in Python
 
     =   The for loop
-            The for iterates across list, dictionary, set, tupes and string
+            The for iterates across list, dictionary, set, turpes and string
             The for loop also iterates across range of numbers
             The for loop also iterates across the iter function
 
