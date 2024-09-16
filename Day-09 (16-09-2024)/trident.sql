@@ -6,12 +6,12 @@ USE trident;
 SELECT "employee";
 DROP TABLE IF EXISTS employee;
 CREATE TABLE employee(
-  id			int(6)					NOT NULL AUTO_INCREMENT,
-  name			varchar(30)				NOT NULL UNIQUE,
-  dob			date					DEFAULT NULL,
+  id			int(6)				NOT NULL AUTO_INCREMENT,
+  name			varchar(30)			NOT NULL UNIQUE,
+  dob			date				DEFAULT NULL,
   gender		enum('F','M','O')		NOT NULL,
   salary		double(12,2)			DEFAULT NULL,
-  age			int(3)					DEFAULT NULL,
+  age			int(3)				DEFAULT NULL,
   profession	varchar(30)				DEFAULT NULL,
   PRIMARY KEY (id)
 );
@@ -23,8 +23,8 @@ INSERT INTO employee VALUES
 	(4,	"Manab",		"2004-02-11",	"M",	300000,	20,	"System analyst"),
 	(5,	"Swati",		"2002-05-11",	"F",	400000,	23,	"Developer"),
 	(6,	"Priya",		"2001-03-10",	"F",	420000,	21,	"Designer"),
-	(7,	"Priyadarsi",	"2001-03-10",	"F",	420000,	21,	"Designer"),
-	(8,	"Harapriya",	"2001-03-10",	"F",	420000,	21,	"Designer"),
+	(7,	"Priyadarsi",	        "2001-03-10",	"F",	420000,	21,	"Designer"),
+	(8,	"Harapriya",	        "2001-03-10",	"F",	420000,	21,	"Designer"),
 	(9,	"Bijay",		"2001-03-10",	"F",	420000,	21,	"Designer");
 
 
