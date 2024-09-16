@@ -1,9 +1,11 @@
-name = input("Enter your name: ")
-age = input("Enter your age: ")
-dob = input("Enter the D.O.B: ")
-gender = input("Enter the gender: ")
-mob = input("Enter the Mobile No: ")
+name=input("Enter your name:")
+age=input("Enter your age:")
+dob=input("Enter the D.O.B:")
+gender=input("Enter the gender:")
+mob=input("Enter the Mobile No:")
 
-# Single print statement with each field on a new line
-print("Name:\t" , name.ljust(10) , "\nAge:\t" , age.ljust(10) , "\nD.O.B:\t" , dob.ljust(10) , 
-      "\nGender:\t" , gender.ljust(10) , "\nMobile:\t" + mob.ljust(10))
+print("Name:\t",name.ljust(10))
+print("Age:\t",age.ljust(10))
+print("D.O.B:\t",dob.ljust(10))
+print("Gender:\t",gender.ljust(10))
+print("Mobile:\t",mob.ljust(10))
