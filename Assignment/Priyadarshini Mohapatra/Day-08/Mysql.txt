@@ -1,0 +1,95 @@
+select * from student;
++----+-----------------+------------+--------+
+| id | name            | dob        | gender |
++----+-----------------+------------+--------+
+|  1 | Priyanka Barika | 2002-05-28 | F      |
+|  2 | Swati Dandapat  | 2002-05-18 | F      |
+|  3 | Ipsita nayak    | 2002-05-10 | F      |
++----+-----------------+------------+--------+
+
+ select * from mark;
++----+-------------+---------+---------+
+| ID | MATHEMATICS | SCIENCE | ENGLISH |
++----+-------------+---------+---------+
+|  1 |          56 |      89 |      23 |
+|  2 |          43 |      90 |      56 |
+|  3 |          45 |      67 |      90 |
++----+-------------+---------+---------+
+
+update  mark set mathematics="67",science="89",english="80" where id=1;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from mark;
++----+-------------+---------+---------+
+| ID | MATHEMATICS | SCIENCE | ENGLISH |
++----+-------------+---------+---------+
+|  1 |          67 |      89 |      80 |
+|  2 |          43 |      90 |      56 |
+|  3 |          45 |      67 |      90 |
++----+-------------+---------+---------+
+3 rows in set (0.00 sec)
+
+insert into student1(NAME,DOB,GENDER,MOBILE,EMAIL)VALUES
+    -> ("MILAN DAS","1960-09-01","M","797816","milandas63@gmail.com"),
+    -> ("Gopinath Ojha","2002-01-09","M","775184","gopin5427@gmail.com"),
+    -> ("Abinash Patra","2002-02-08","M","7848039","patraabinash374@gmail.com"),
+    -> ("Priyadarshini Mohapatra","2002-01-25","F","8917460","priya328@gmail.com"),
+    -> ("Ipsita Nayak","2002-02-05","F","8144661","ipsitanayak923@gmail.com"),
+    -> ("Harapriya Panda","2002-01-03","F","6372322","harapriya1813@gmail.com"),
+    -> ("Bijay Kumar Behera","2002-09-13","M","720538","bijaybehera594@gmail.com"),
+    -> ("Srikant Behera","2002-01-04","M","7978841","kumarsrikant0788@gmail.com"),
+    -> ("Dibyaranjan Sethi","2002-04-07","M","9114168","dibyaranjanip9@gmail.com");
+Query OK, 9 rows affected (0.01 sec)
+Records: 9  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM student1;
++----+-------------------------+------------+--------+---------+----------------------------+
+| ID | NAME                    | DOB        | GENDER | MOBILE  | EMAIL                      |
++----+-------------------------+------------+--------+---------+----------------------------+
+|  1 | Priya                   | 2001-01-25 | F      |  891746 | priya@123                  |
+| 11 | MILAN DAS               | 1960-09-01 | M      |  797816 | milandas63@gmail.com       |
+| 12 | Gopinath Ojha           | 2002-01-09 | M      |  775184 | gopin5427@gmail.com        |
+| 13 | Abinash Patra           | 2002-02-08 | M      | 7848039 | patraabinash374@gmail.com  |
+| 14 | Priyadarshini Mohapatra | 2002-01-25 | F      | 8917460 | priya328@gmail.com         |
+| 15 | Ipsita Nayak            | 2002-02-05 | F      | 8144661 | ipsitanayak923@gmail.com   |
+| 16 | Harapriya Panda         | 2002-01-03 | F      | 6372322 | harapriya1813@gmail.com    |
+| 17 | Bijay Kumar Behera      | 2002-09-13 | M      |  720538 | bijaybehera594@gmail.com   |
+| 18 | Srikant Behera          | 2002-01-04 | M      | 7978841 | kumarsrikant0788@gmail.com |
+| 19 | Dibyaranjan Sethi       | 2002-04-07 | M      | 9114168 | dibyaranjanip9@gmail.com   |
++----+-------------------------+------------+--------+---------+----------------------------+
+10 rows in set (0.00 sec)
+
+#####Employee Table
+
+CREATE TABLE EMPLOYEE(
+    -> id INT(6) NOT NULL AUTO_INCREMENT,
+    -> Ename VARCHAR(30) NOT NULL,
+    -> Gender ENUM('F','M','O') NOT NULL,
+    -> Esalary int(50) not null,
+    -> PRIMARY KEY(id)
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> INSERT INTO EMPLOYEE(Ename,Gender,Esalary) VALUES
+    -> ("RAM BABU","M","3000"),
+    -> ("SAM BABU","M","500"),
+    -> ("FULANA DEVI","F","2000"),
+    -> ("SITA KUMARI","F","1000"),
+    -> ("DAMA BABU","M","1500");
+Query OK, 5 rows affected (0.01 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM EMPLOYEE;
++----+-------------+--------+---------+
+| id | Ename       | Gender | Esalary |
++----+-------------+--------+---------+
+|  1 | RAM BABU    | M      |    3000 |
+|  2 | SAM BABU    | M      |     500 |
+|  3 | FULANA DEVI | F      |    2000 |
+|  4 | SITA KUMARI | F      |    1000 |
+|  5 | DAMA BABU   | M      |    1500 |
++----+-------------+--------+---------+
+
+
+
