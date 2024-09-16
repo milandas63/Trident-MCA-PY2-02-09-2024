@@ -1,0 +1,54 @@
+
+mysql> select * from student2;
++----+-----------+------------+--------+---------------------------+------------+
+| id | name      | dob        | gender | Email                     | Mobile     |
++----+-----------+------------+--------+---------------------------+------------+
+|  1 | Abinash   | 2002-09-19 | M      | patraabinash374@gmail.com | 7848039329 |
+|  2 | Abhi      | 2002-09-21 | M      | rajputabhi474@gmail.com   | 7848039359 |
+|  3 | gopi      | 2002-12-11 | M      | gopinath74@gmail.com      | 7848659359 |
+|  4 | Harapriya | 2003-10-23 | F      | pandaharapriya@gmail.com  | 7869057486 |
+|  5 | ipsita    | 2003-06-13 | F      | nayakipsita@gmail.com     | 7869065486 |
+|  6 | Dibya     | 2002-09-18 | M      | dibyaranjan@gmail.com     | 7861234486 |
+|  7 | Srikanta  | 2002-08-04 | M      | srikanta@gmail.com        | 7861298765 |
+|  8 | jagan     | 2003-08-01 | M      | lenkajagan@gmail.com      | 7654328765 |
+|  9 | Mitali    | 2006-08-23 | F      | patramitali@gmail.com     | 6756428765 |
+| 10 | kali      | 2001-08-19 | M      | kaliprasad@gmail.com      | 9876543765 |
++----+-----------+------------+--------+---------------------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> select * from student3;
++----+-----------+-----+--------+------+
+| id | name      | age | branch | year |
++----+-----------+-----+--------+------+
+|  1 | Abinash   |  22 | MCA    | 2nd  |
+|  2 | Abhi      |  22 | MCA    | 2nd  |
+|  3 | gopi      |  23 | MCA    | 2nd  |
+|  4 | Harapriya |  25 | MCA    | 2nd  |
+|  5 | ipsita    |  21 | MCA    | 2nd  |
+|  6 | Dibya     |  22 | MCA    | 2nd  |
+|  7 | Srikanta  |  24 | MCA    | 2nd  |
+|  8 | jagan     |  22 | MCA    | 2nd  |
+|  9 | Mitali    |  19 | BCA    | 2nd  |
+| 10 | kali      |  20 | BCA    | 3rd  |
++----+-----------+-----+--------+------+
+10 rows in set (0.00 sec)
+
+
+mysql> select * from studentmarks;
++----+-----------+----+----+------+--------+
+| id | name      | CD | SE | JAVA | PYTHON |
++----+-----------+----+----+------+--------+
+|  1 | Abinash   | 98 | 97 |   98 |     95 |
+|  2 | Abhi      | 98 | 97 |   95 |     90 |
+|  3 | gopi      | 99 | 97 |   95 |     95 |
+|  4 | Harapriya | 99 | 95 |   98 |     96 |
+|  5 | ipsita    | 99 | 96 |   90 |     96 |
+|  6 | Dibya     | 98 | 96 |   95 |     96 |
+|  7 | Srikanta  | 97 | 95 |   94 |     96 |
+|  8 | jagan     | 97 | 96 |   97 |     97 |
+|  9 | Mitali    | 94 | 87 |   89 |     97 |
+| 10 | kali      | 90 | 91 |   92 |     90 |
++----+-----------+----+----+------+--------+
+10 rows in set (0.00 sec)
+
+mysql>
