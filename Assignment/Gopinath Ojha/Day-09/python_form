@@ -1,1 +1,11 @@
+name=input("Enter your name:")
+age=input("Enter your age:")
+dob=input("Enter the D.O.B:")
+gender=input("Enter the gender:")
+mob=input("Enter the Mobile No:")
 
+print("Name:\t",name.ljust(10))
+print("Age:\t",age.ljust(10))
+print("D.O.B:\t",dob.ljust(10))
+print("Gender:\t",gender.ljust(10))
+print("Mobile:\t",mob.ljust(10))
