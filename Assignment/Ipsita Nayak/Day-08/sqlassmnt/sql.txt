@@ -1,0 +1,162 @@
+ INSERT INTO student6(name,dob,gender,email,phone)VALUES
+    -> ('RAM','09.03.2001','M','ram113@gmail','983456'),
+    -> ('Sita','12.01.2004','F','sita23@gmail','34893'),
+    -> ('shyam','09.03.2001','M','ram113@gmail','983456');
+
+
+mysql> select*from student6;
++----+-------+------------+--------+--------------+--------+
+| id | name  | DOB        | gender | email        | phone  |
++----+-------+------------+--------+--------------+--------+
+|  1 | RAM   | 2009-03-20 | M      | ram113@gmail | 983456 |
+|  2 | Sita  | 2012-01-20 | F      | sita23@gmail |  34893 |
+|  3 | shyam | 2009-03-20 | M      | ram113@gmail | 983456 |
++----+-------+------------+--------+--------------+--------+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+mysql> CREATE TABLE Information(
+    -> id INT(6) NOT NULL AUTO_INCREMENT,
+    -> name VARCHAR(30) NOT NULL,
+    -> DOB DATE,
+    -> gender ENUM('F','M','O') NOT NULL,
+    -> email VARCHAR(30) NOT NULL,
+    -> phone int(20),
+    -> PRIMARY KEY(id)
+    -> );
+
+
+mysql> SHOW Tables;
++----------------+
+| Tables_in_ihub |
++----------------+
+| information    |
+| student6       |
++----------------+
+2 rows in set (0.00 sec)
+
+
+mysql> INSERT INTO information(name,DOB,gender,email,phone)VALUES
+    -> ('MILAN','1960-07-09','M','milan23@gmail','91678329'),
+    -> ('Gopinath Ojha','2002-06-07','M','gopi73@gmail','91674239'),
+    -> ('Abinash Patra','2002-07-05','M','abhi73@gmail','81674529'),
+    -> ('Priyadarshini Mohapatra','2002-01-25','F','pree73@gmail','8146789'),
+    -> ('Harapriya Panda','2002-10-13','F','hara73@gmail','8189234'),
+    -> ('Ipsita Nayak','2002-01-07','F','ipsita73@gmail','8167934'),
+    -> ('Bijay Kumar Behera','2003-04-06','M','bijay73@gmail','8187342'),
+    -> ('Srikant Behera','2002-02-09','M','srikant91@gmail','8145821'),
+    -> ('Dibyaranjan Sethi','2003-11-05','M','dibya41@gmail','8123761');
+Query OK, 9 rows affected (0.01 sec)
+
+mysql> select*from information;
++----+-------------------------+------------+--------+-----------------+----------+
+| id | name                    | DOB        | gender | email           | phone    |
++----+-------------------------+------------+--------+-----------------+----------+
+| 16 | MILAN                   | 1960-07-09 | M      | milan23@gmail   | 91678329 |
+| 17 | Gopinath Ojha           | 2002-06-07 | M      | gopi73@gmail    | 91674239 |
+| 18 | Abinash Patra           | 2002-07-05 | M      | abhi73@gmail    | 81674529 |
+| 19 | Priyadarshini Mohapatra | 2002-01-25 | F      | pree73@gmail    |  8146789 |
+| 20 | Harapriya Panda         | 2002-10-13 | F      | hara73@gmail    |  8189234 |
+| 21 | Ipsita Nayak            | 2002-01-07 | F      | ipsita73@gmail  |  8167934 |
+| 22 | Bijay Kumar Behera      | 2003-04-06 | M      | bijay73@gmail   |  8187342 |
+| 23 | Srikant Behera          | 2002-02-09 | M      | srikant91@gmail |  8145821 |
+| 24 | Dibyaranjan Sethi       | 2003-11-05 | M      | dibya41@gmail   |  8123761 |
++----+-------------------------+------------+--------+-----------------+----------+
+9 rows in set (0.01 sec)
+
+mysql> Create Table Marks(
+    -> English INT(20),
+    -> MATHS INT(20),
+    -> SCIENCE INT(20)
+    -> );
+
+
+mysql> SHOW TABLES;
++----------------+
+| Tables_in_ihub |
++----------------+
+| information    |
+| marks          |
+| student6       |
++----------------+
+3 rows in set (0.00 s
+
+
+mysql> INSERT INTO marks(English,MATHS,SCIENCE)VALUES
+    -> ('89','78','91'),
+    -> ('78','71','78'),
+    -> ('90','78','68'),
+    -> ('89','76','89'),
+    -> ('90','67','67'),
+    -> ('67','78','76'),
+    -> ('89','88','56'),
+    -> ('67','78','67'),
+    -> ('89','56','63');
+Query OK, 9 rows affected (0.01 sec)
+
+mysql> select*from marks;
++---------+-------+---------+
+| English | MATHS | SCIENCE |
++---------+-------+---------+
+|      89 |    78 |      91 |
+|      78 |    71 |      78 |
+|      90 |    78 |      68 |
+|      89 |    76 |      89 |
+|      90 |    67 |      67 |
+|      67 |    78 |      76 |
+|      89 |    88 |      56 |
+|      67 |    78 |      67 |
+|      89 |    56 |      63 |
+
++---------+-------+---------+
+
+
+
+ CREATE TABLE Employee(
+    -> id INT(6) NOT NULL AUTO_INCREMENT,
+    -> NAME VARCHAR(30) NOT NULL,
+    -> DOB DATE,
+    -> gender Enum('F','M','o') NOT NULL,
+    -> Salary INT(30),
+    -> age INT(20),
+    -> Profession VARCHAR(30),
+    -> PRIMARY KEY(id)
+    -> );
+
+
+
+mysql> SHOW TABLES;
++----------------+
+| Tables_in_ihub |
++----------------+
+| employee       |
+| information    |
+| marks          |
+| student6       |
++----------------+
+
+
+
+
+ INSERT INTO Employee(Name,DOB,gender,Salary,age,Profession)VALUES
+    -> ('Payel','2000-07-03','F','500000','23','Developer'),
+    -> ('Twinkle','2002-10-05','F','400000','22','Softwaer engineer'),
+    -> ('Asha','2009-02-10','F','350000','21','Data analyst'),
+    -> ('Manab','2004-02-11','M','300000','20','System analyst'),
+    -> ('Swati','2002-05-11','F','400000','23','Developer'),
+    -> ('priya','2001-03-10','F','420000','21','Designer');
+
+mysql> select*from Employee;
++----+---------+------------+--------+--------+------+-------------------+
+| id | NAME    | DOB        | gender | Salary | age  | Profession        |
++----+---------+------------+--------+--------+------+-------------------+
+|  7 | Payel   | 2000-07-03 | F      | 500000 |   23 | Developer         |
+|  8 | Twinkle | 2002-10-05 | F      | 400000 |   22 | Softwaer engineer |
+|  9 | Asha    | 2009-02-10 | F      | 350000 |   21 | Data analyst      |
+| 10 | Manab   | 2004-02-11 | M      | 300000 |   20 | System analyst    |
+| 11 | Swati   | 2002-05-11 | F      | 400000 |   23 | Developer         |
+| 12 | priya   | 2001-03-10 | F      | 420000 |   21 | Designer          |
++----+---------+------------+--------+--------+------+-------------------+
