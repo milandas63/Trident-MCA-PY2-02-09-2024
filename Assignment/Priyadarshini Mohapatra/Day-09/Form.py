@@ -1,0 +1,13 @@
+name = input("Your name: ")
+age = input("Your age: ")
+dob = input("Date of birth (dd-mm-yyyy): ")
+gender = input("Gender [M/F]: ")
+mob = input("Mobile No.: ")
+email = input("Email-id: ")
+
+print("Name:".ljust(15), name)
+print("Age:".ljust(15), age)
+print("DOB:".ljust(15), dob)
+print("Gender (M/F):".ljust(15), gender)
+print("Mobile No.:".ljust(15), mob)
+print("Email-id:".ljust(15), email)
