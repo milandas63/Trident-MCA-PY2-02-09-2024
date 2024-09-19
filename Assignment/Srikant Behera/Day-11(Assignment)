@@ -1,0 +1,17 @@
+users = {"Srikant": "2003","Divya": "2002","Vijaya": "2001"}
+
+def login(username, password):
+    try:
+        if username not in users:
+            raise ValueError("Username not found")
+        if users[username] != password:
+            raise ValueError("Incorrect password")
+        
+        print("Login successful!")
+    
+    except ValueError as e:
+        print(f"Login failed: {e}")
+
+username = input("Enter your username: ")
+password = input("Enter your password: ")
+login(username, password)
