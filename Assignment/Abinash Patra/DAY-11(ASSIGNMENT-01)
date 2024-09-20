@@ -1,0 +1,20 @@
+
+user_data = {
+    "admin": "admin123",
+    "user1": "password1",
+    "user2": "password2"
+}
+def login():
+    try:
+        username = input("Enter your username: ")
+        if username not in user_data:
+            raise ValueError("Username not found!")
+        password = input("Enter your password: ")
+        if user_data[username] != password:
+            raise ValueError("Incorrect password!")
+        print("Login successful!")
+    except ValueError as e: 
+        print(f"Login failed: {e}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+login()
