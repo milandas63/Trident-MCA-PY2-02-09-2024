@@ -1,0 +1,23 @@
+class MainError(ValueError):
+    def __init__(self):
+        msg=""
+class MissingKeyError(MainError):
+    def __init__(self):
+        msg="Missing keyu error"
+class MissingValueError(MainError):
+    def __init__(self):
+        msg="Missing value error"
+
+dic={"bijay":"1234","sanjay":"sanjay123","":"4536","gopi":"","ramesh":"8280"}
+
+for key,value in dic.items():
+    try:
+        if key=="":
+            raise MissingKeyError()
+        elif value=="":
+            raise MissingValueError()
+        print("Valid Username and Password")
+    except MissingKeyError:
+        print("User name is missing")
+    except MissingValueError:
+        print("Password is missing")        
