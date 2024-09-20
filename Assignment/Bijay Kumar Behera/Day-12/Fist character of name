@@ -1,0 +1,6 @@
+name=input("enter your name")
+list=[]
+list=name.split()
+
+for each in list:
+    print(each[0],end="")
