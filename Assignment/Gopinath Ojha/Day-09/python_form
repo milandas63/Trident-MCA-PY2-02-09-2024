@@ -1,13 +1,20 @@
-name = input("Your name: ")
-age = input("Your age: ")
-dob = input("Date of birth (dd-mm-yyyy): ")
-gender = input("Gender [M/F]: ")
-mob = input("Mobile No.: ")
-email = input("Email-id: ")
+more = "Y"
+buffer = []
 
-print("Name:".ljust(15), name)
-print("Age:".ljust(15), age)
-print("DOB:".ljust(15), dob)
-print("Gender (M/F):".ljust(15), gender)
-print("Mobile No.:".ljust(15), mob)
-print("Email-id:".ljust(15), email)
+while more == "Y":
+    name = input("Your name: ".ljust(25))
+    age = input("Your age: ".ljust(25))
+    dob = input("DOB(dd-mm-yyyy): ".ljust(25))
+    gender = input("Gender [M/F]: ".ljust(25))
+    mob = input("Mobile No.: ".ljust(25))
+    email = input("Email-id: ".ljust(25))
+    print()
+    buffer.append((name, age, dob, gender, mob, email))
+    
+    more = input("Want to insert more data (Y/N):").upper()
+    if more != "Y":
+        break
+
+print()
+for data in buffer:
+    print(f"Name: {data[0]}, Age: {data[1]}, DOB: {data[2]}, Gender (M/F): {data[3]}, Mobile No.: {data[4]}, Email-id: {data[5]}")
