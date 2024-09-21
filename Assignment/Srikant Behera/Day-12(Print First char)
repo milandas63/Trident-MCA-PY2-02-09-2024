@@ -1,0 +1,9 @@
+def initial(name):
+    name=name.split()
+    initials=""
+    for each in name:
+        initials+=each[0]
+        
+    return initials
+    
+print(initial("Srikant Behera"))
