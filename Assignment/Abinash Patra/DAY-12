@@ -1,0 +1,30 @@
+def add(x,y):
+    return x+y
+def sub(x,y):
+    return x-y
+def mul(x,y):
+    return x*y
+def div(x,y):
+    if y==0:
+      return ("invalid")
+    else:
+      return x/y
+n1=int(input("Enter first no: "))
+n2=int(input("Enter second no: "))
+while(True):
+    choice=input("Enter the choice:\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n5.Exit\n")
+    if choice=="1":
+        print("sum:",add(n1,n2))
+        break
+    elif choice=="2":
+        print("Subtraction:",sub(n1,n2))
+        break
+    elif choice=="3":
+        print("Multiplication:",mul(n1,n2))
+        break
+    elif choice=="4":
+        print("Division:",div(n1,n2))
+        break
+    else:
+        print("Enter a valid choice")
+        break
