@@ -1,1 +1,27 @@
 
+class MainError(ValueError):
+    def __init__(self):
+        msg = ""
+
+class UsernameError(MainError):
+    def __init__(self):
+        msg = "Username not found error!!"
+
+class PasswordError(MainError):
+    def __init__(self):
+        msg = "Password not found error!!"
+        
+diction={"Dibya":"4545","Gopinath":"6963","Bijay":"0707","Abhi":"1818","harapriya":"6345","Srikant":"6363"}
+for key,value in diction.items():
+    try:
+        if key=="":
+            msg = "Username not found error!!"
+            raise UsernameError()
+        elif value=="":
+            msg="Password not found error!!"
+            raise PasswordError()
+        print("Valid username & Password")
+    except UsernameError:
+        print("Username not found error!!")
+    except PasswordError:
+        print("Password not found error!!")
