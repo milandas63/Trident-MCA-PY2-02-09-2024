@@ -1,0 +1,33 @@
+sum = lambda x, y: x + y
+dif = lambda x, y: x - y
+mul = lambda x, y: x * y
+div = lambda x, y: x / y
+
+x = float(input("Enter the 1st number: "))
+y = float(input("Enter the 2nd number: "))
+
+while True:
+    print("\nChoose the operation you want to perform:")
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+    print("5. Exit")
+
+    choice = int(input("Enter your choice (1/2/3/4/5): "))
+
+    if choice == 1:
+        print("Your Addition is:", sum(x, y))
+    elif choice == 2:
+        print("Your Subtraction is:", dif(x, y))
+    elif choice == 3:
+        print("Your Multiplication is:", mul(x, y))
+    elif choice == 4:
+        print("Your Division is:", div(x, y))
+    elif choice == 5:
+        print("Exiting the program.")
+        break
+    else:
+        print("Invalid choice! Please select a valid operation.")
+
+    print()
