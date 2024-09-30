@@ -2309,4 +2309,7 @@ No more data in list
     =   To work with images in tkinter, install Pillow library:
             pip install Pillow
 
-    
+    =   CLASS-ASSIGNMENT:
+        Write a program to add a new Label widget to the tk_gui2.py file.
+
+
