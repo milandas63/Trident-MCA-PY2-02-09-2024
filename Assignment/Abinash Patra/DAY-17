@@ -1,0 +1,13 @@
+from tkinter import *
+from PIL import ImageTk,Image
+
+root=Tk()
+root.title("Abhi") 
+root.iconbitmap("ABHI-01.ico")
+root.geometry("400x300")
+
+lbl1=Label(root,text="Hello world")
+lbl2=Label(root,text="Every shopper looks for the best \n deals & discounts before buying any product.")
+lbl1.pack()
+lbl2.pack()
+root.mainloop()
