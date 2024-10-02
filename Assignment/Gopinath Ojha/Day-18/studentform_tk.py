@@ -9,7 +9,7 @@ def savedata():
 
     with open('people.csv',mode='a',newline='') as file:
         writer=csv.writer(file)
-        writer.writerow([f"Name:{name}", f"Age:{age}", f"DOB:{dob}", f"Mobile_No:{mob}"])
+        writer.writerow(['name','age','dob','mob'])
 
     entname.delete(0, END)
     entage.delete(0, END)
