@@ -1,0 +1,65 @@
+from tkinter import *
+
+def show(symbol):
+    current = lbl2['text']
+    lbl2['text'] = current + symbol
+
+
+def clear():
+    lbl2['text'] = ""
+
+
+def evaluate():
+        result = str(eval(lbl2['text']))  
+        lbl2['text'] = result
+
+root = Tk()
+root.title("Calculator")
+
+
+lbl1 = Label(root, text="CALCULATOR")
+lbl1.grid(row=0, column=0, columnspan=5)
+
+lbl2 = Label(root, text="", width=30,anchor="e")
+lbl2.grid(row=1, column=0, columnspan=4)
+
+btn1 = Button(root, text="7", width=10, command=lambda: show("7"))
+btn1.grid(row=2, column=0)
+
+btn2 = Button(root, text="8", width=10, command=lambda: show("8"))
+btn2.grid(row=2, column=1)
+
+btn3 = Button(root, text="9", width=10, command=lambda: show("9"))
+btn3.grid(row=2, column=2)
+
+btn4 = Button(root, text="4", width=10, command=lambda: show("4"))
+btn4.grid(row=3, column=0)
+
+btn5 = Button(root, text="5", width=10, command=lambda: show("5"))
+btn5.grid(row=3, column=1)
+
+btn6 = Button(root, text="6", width=10, command=lambda: show("6"))
+btn6.grid(row=3, column=2)
+
+btn7 = Button(root, text="1", width=10, command=lambda: show("1"))
+btn7.grid(row=4, column=0)
+
+btn8 = Button(root, text="2", width=10, command=lambda: show("2"))
+btn8.grid(row=4, column=1)
+
+btn9 = Button(root, text="3", width=10, command=lambda: show("3"))
+btn9.grid(row=4, column=2)
+
+btn0 = Button(root, text="0", width=10, command=lambda: show("0"))
+btn0.grid(row=5, column=0)
+
+btn_add = Button(root, text="+", width=21, command=lambda: show("+"))
+btn_add.grid(row=5, column=1, columnspan=2)
+
+btn_clear = Button(root, text="C", width=10, command=clear)
+btn_clear.grid(row=6, column=0)
+
+btn_equals = Button(root, text="=", width=21, command=evaluate)
+btn_equals.grid(row=6, column=1, columnspan=2)
+
+root.mainloop()
