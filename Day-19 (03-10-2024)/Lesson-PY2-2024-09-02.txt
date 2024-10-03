@@ -2383,3 +2383,8 @@ No more data in list
             |-------+---------------|
             |   C   |       =       |
             +-----------------------+
+
+    =   ASSIGNMENT:
+        Debug tk_gui6.py and make it functional.
+
+
