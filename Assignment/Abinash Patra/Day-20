@@ -1,0 +1,34 @@
+from tkinter import *
+
+root = Tk()
+root.title("Combobox and Entry Demo")
+
+def dispaly():
+    selected_value=select.get()
+    entered_text=ent.get()
+
+    
+
+select = StringVar()
+select.set("select")
+
+family = ["father", "mother", "brother", "sister"]
+option = OptionMenu(root, select, *family)
+option.pack()
+
+
+ent= Entry(root)
+ent.pack()
+
+def submit():
+    selected_value = select.get()  
+    entered_text = ent.get()     
+    lbl.config(text=f"your{ selected_value}'s name is:{entered_text}")
+
+btn = Button(root, text="Submit", command=submit)
+btn.pack()
+
+lbl = Label(root, text="")
+lbl.pack()
+
+root.mainloop()
