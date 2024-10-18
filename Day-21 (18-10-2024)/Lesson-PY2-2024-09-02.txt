@@ -2459,3 +2459,5 @@ No more data in list
         |       |                         |     |      |       |     |     |      |       |     |     |      |       |     |     |      |       |     |
         |       |                         |     |      |       |     |     |      |       |     |     |      |       |     |     |      |       |     |
         |       |                         |     |      |       |     |     |      |       |     |     |      |       |     |     |      |       |     |
+
+    =   Write a HTML script to link all figures with different of figures.jpg to different pages:
