@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<center><h1>Chief Ministers</h1></center>
+    
+<center>
+    <img src="chief-ministers.png" usemap="#map">
+</center>
+    
+        <map name="map">
+            <area shape="rect" coords="2,4,123,329" href="https://en.wikipedia.org/wiki/Naveen_Patnaik">
+            <area shape="rect" coords="128,8,245,328" href="https://en.wikipedia.org/wiki/Tarun_Gogoi">
+            <area shape="rect" coords="253,5,372,329" href="https://en.wikipedia.org/wiki/Sheila_Dikshit">
+            <area shape="rect" coords="378,7,496,329" href="https://en.wikipedia.org/wiki/Mamata_Banerjee">
+        </map>
+</body>
+</html
