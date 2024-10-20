@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form>
+    <center>
+    <h1>STUDENT INFO SYSTEM</h1>
+    </center>
+    <br>
+
+    <center>
+<label>ID.NO:</label>
+<input type="number"><br><br>
+<label>Candidate name:</label>
+<input type="text" size="23"><br><br>
+<label>Father's name:</label>
+<input type="text" size="25"/><br><br>
+
+<label>Gender:</label>
+<input type="radio"name="male">Male
+<input type="radio"name="male">Female<br><br>
+
+<label>Date of birth :</label>
+<input type="date" size="26"><br><br>
+<label>Highest Qualification:</label>
+<input type="text" size="18"><br><br>
+<label>Location:</label>
+<input type="text" size="30"><br><br>
+   </center>
+<center>
+<input type="button"value="Save">
+<input type="button"value="Exit">
+</center>
+</form>
+</body>
+</html>
