@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Population Report</title>
+    <style>
+        
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.header-row th {
+    text-align: center;
+}
+
+.sub-header th {
+    font-size: 0.9em;
+}
+
+    </style>
+</head>
+<body>
+
+    <h2><CENTER>POPULATION REPORT</CENTER></h2>
+
+    <table>
+        <thead>
+            <tr class="header-row">
+                <th rowspan="4">SLNO</th>
+                <th rowspan="4">NAME OF THE DISTRICT</th>
+                <th colspan="16">POPULATION</th>
+            </tr>
+            <tr class="sub-header">
+                <th colspan="8">URBAN</th>
+                <th colspan="8">RURAL</th>
+            </tr>
+            <tr class="sub-header">
+                <th colspan="4">MALE</th>
+                <th colspan="4">FEMALE</th>
+                <th colspan="4">MALE</th>
+                <th colspan="4">FEMALE</th>
+            </tr>
+            <tr class="sub-header">
+                <th>&lt;5</th>
+                <th>6-15</th>
+                <th>16-25</th>
+                <th>&gt;25</th>
+                <th>&lt;5</th>
+                <th>6-15</th>
+                <th>16-25</th>
+                <th>&gt;25</th>
+                <th>&lt;5</th>
+                <th>6-15</th>
+                <th>16-25</th>
+                <th>&gt;25</th>
+                <th>&lt;5</th>
+                <th>6-15</th>
+                <th>16-25</th>
+                <th>&gt;25</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>BHUBANESWAR</td>
+                <td>12</td>
+                <td>15</td>
+                <td>41</td>
+                <td>33</td>
+                <td>11</td>
+                <td>14</td>
+                <td>38</td>
+                <td>32</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>CUTTACK</td>
+                <td>10</td>
+                <td>11</td>
+                <td>36</td>
+                <td>21</td>
+                <td>13</td>
+                <td>6</td>
+                <td>20</td>
+                <td>28</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+           
+        </tbody>
+    </table>
+
+</body>
+</html>
 
