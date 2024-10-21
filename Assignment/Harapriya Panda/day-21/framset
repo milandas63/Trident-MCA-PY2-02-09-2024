@@ -38,3 +38,44 @@
     
 </body>
 </html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="frm3.html" target="third">Naveen Pattnaik</a>
+        </li>
+    </ul>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="C:\Only HTML CSS\Decisions-Shri-Naveen-Patnaik-COVID-Fight.jpg" alt="" height="300px">
+    
+</body>
+</html>
