@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    width: 300px;
+    background-color:black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.display {
+    background-color: #333;
+    color: #fff;
+    font-size: 2em;
+    text-align: right;
+    padding: 20px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 1rem;
+}
+
+.button {
+    padding: 10px;
+    font-size: 1.2em;
+    border: none;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    border-radius: 2rem;
+    
+}
+
+.button:active {
+    background-color: #ddd;
+}
+
+.button:nth-child(4n) {
+    background-color: #ff9500;
+    color: #fff;
+}
+
+.button:nth-child(4n):active {
+    background-color: #e48900;
+}
+.name
+{
+    color: white;
+    margin-left: 1rem;
+}
+
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <p class="name">Gopinath</p>
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="button" onclick="clearDisplay()">AC</button>
+            <button class="button" onclick="deleteLast()">C</button>
+            <button class="button" onclick="appendCharacter('%')">%</button>
+            <button class="button" onclick="appendCharacter('/')">/</button>
+            <button class="button" onclick="appendCharacter('7')">7</button>
+            <button class="button" onclick="appendCharacter('8')">8</button>
+            <button class="button" onclick="appendCharacter('9')">9</button>
+            <button class="button" onclick="appendCharacter('*')">*</button>
+            <button class="button" onclick="appendCharacter('4')">4</button>
+            <button class="button" onclick="appendCharacter('5')">5</button>
+            <button class="button" onclick="appendCharacter('6')">6</button>
+            <button class="button" onclick="appendCharacter('-')">-</button>
+            <button class="button" onclick="appendCharacter('1')">1</button>
+            <button class="button" onclick="appendCharacter('2')">2</button>
+            <button class="button" onclick="appendCharacter('3')">3</button>
+            <button class="button" onclick="appendCharacter('+')">+</button>
+            <button class="button" onclick="appendCharacter('0')">0</button>
+            <button class="button" onclick="appendCharacter('00')">00</button>
+            <button class="button" onclick="appendCharacter('.')">.</button>
+            <button class="button" onclick="calculateResult()" rowspan="2">=</button>
+        </div>
+    </div>
+    <script>
+
+let display = document.getElementById('display');
+
+function clearDisplay() {
+    display.textContent = '0';
+}
+
+function deleteLast() {
+    display.textContent = display.textContent.slice(0, -1);
+    if (display.textContent === '') {
+        display.textContent = '0';
+    }
+}
+
+function appendCharacter(character) {
+    if (display.textContent === '0') {
+        display.textContent = character;
+    } else {
+        display.textContent += character;
+    }
+}
+
+function calculateResult() {
+    try {
+        display.textContent = eval(display.textContent);
+    } catch {
+        display.textContent = 'Error';
+    }
+}
+
+    </script>
+</body>
+</html>
