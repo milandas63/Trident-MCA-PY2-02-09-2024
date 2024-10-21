@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<frameset cols="45%,55%">
+    <frameset rows="50%,50%">
+        <frame src="frame1.html" name="first">
+        <frame name="second">
+    </frameset>
+    <frame name="third">
+</frameset>
+<body>
+</body>
+</html>
 
+
+
+frame-1
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Frame 1</h1>
+    <ul>
+        <li>
+            <a href="frame2.html" target="second">Click Me....</a>
+        </li>
+    </ul>
+</body>
+</html>
+
+
+
+frame-2
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Frame 2</h2>
+    <a href="frame3.html" target="third">python</a>
+    
+</body>
+</html>
+
+frame-3
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Frame 3</h2>
+    <img src="https://images.ctfassets.net/r9o86ar0p03f/python.jpg/fa27b8a1c15551b74db80c7013ea2be4/python.jpg?fm=webp&w=1640&h=1000" alt="Python" height="600px">
+</body>
+</html>
