@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<frameset cols="45%,55%">
+    <frameset rows="50%,50%">
+        <frame src="frame1.html" name="first">
+        <frame name="second">
+    </frameset>
+    <frame name="third">
+</frameset>
+<body>
+</body>
+</html>
+
+
+FRAME-1
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Frame 1</h1>
+    <ul>
+        <li>
+            <a href="frame2.html" target="second">Click Here....</a>
+        </li>
+    </ul>
+</body>
+</html>
+
+
+FRAME-2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Frame 2</h2>
+    <a href="frame3.html" target="third">punjab</a>
+    
+</body>
+</html>
+
+FRAME-3
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Frame 3</h2>
+    <img src="https://t4.ftcdn.net/jpg/00/63/73/21/360_F_63732183_4Xs5TOzhBmpvG2WVsiZo2eN54icj5zpz.jpg" alt="punjab" height="500px">
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
