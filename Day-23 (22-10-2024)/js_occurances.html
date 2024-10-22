@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <script>
+            var text = "This is a line of text";
+            var alphaCount = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+            for(var i=0; i<text.length; i++) {
+                each = text.charCodeAt(i);
+                if(each>=65 && each<=90) {
+                    alphaCount[each-65]++;
+                } else if(each>=97 && each<=122) {
+                    alphaCount[each-97]++;
+                }
+            }
+            for(var i=0; i<alphaCount.length; i++) {
+                if(alphaCount[i]>0) {
+                    document.writeln(alphaCount[i])
+                    //document.writeln( String.fromCharCode(i+65) + " = " + alphaCode[i] + "<br>");
+                }
+            }
+        </script>
+    </body>
+</html>
