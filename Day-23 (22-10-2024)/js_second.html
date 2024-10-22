@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Simple Javascript Program</title>
+    </head>
+    <body>
+        <script>
+            var spaces = 40;
+            var stars = 1;
+            document.writeln("<tt>")
+            for(var i=0; i<10; i++) {
+                for(var j=0; j<spaces; j++)
+                    document.write("&nbsp;");
+                for(var j=0; j<stars; j++)
+                    document.write("*");
+                document.writeln("<br>");
+                spaces--; stars += 2;
+            }
+            document.writeln("</tt>")
+        </script>
+        <br>
+    </body>
+</html>

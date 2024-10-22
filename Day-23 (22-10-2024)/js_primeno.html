@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Prime Number Generator</title>
+        <script>
+            function generate() {
+                var from = parseInt(document.getElementById("from").value);
+                var upto = parseInt(document.getElementById("upto").value);
+                var count = 0;
+
+                document.writeln("<table border='1' cellspacing='5' cellpadding='5'>");
+                document.writeln("<tr>");
+                for(var i=from; i<=upto; i++) {
+                    yn = true;
+                    for(var j=2; j<i; j++) {
+                        if(i%j==0) {
+                            yn = false;
+                            break;
+                        }
+                    }
+                    if(yn) {
+                        document.write("<td>");
+                        document.write(i);
+                        document.write("</td>");
+                        count++;
+                        if(count>=15) {
+                            document.write("</tr>");
+                            document.write("<tr>");
+                            count = 0;
+                        }
+                    }
+                }
+                document.writeln("</tr>");
+                document.writeln("</table>");
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Prime Number Generator</h2>
+        <br>
+        <label>From which number: </label>
+        <input type="text" id="from">
+        <br>
+        <label>Upto which number: </label>
+        <input type="text" id="upto">
+        <br><br>
+        <button onclick="generate();">Generate</button>
+    </body>
+</html>

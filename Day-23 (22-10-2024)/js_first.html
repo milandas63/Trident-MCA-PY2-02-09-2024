@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>First Java Script Program</title>
+        <script>
+            function sayHello() {
+                var name = document.getElementById("name").value;
+                var hello = document.getElementById("tell");
+                hello.innerHTML = "Hello "+name;
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Welcome</h2>
+        <br>
+        <label for="">What is your name? </label>
+        <input type="text" id="name">
+        <br><br>
+        <button onclick="sayHello();">Submit</button>
+        <br><br>
+        <label id="tell">Name is</label>
+    </body>
+</html>
