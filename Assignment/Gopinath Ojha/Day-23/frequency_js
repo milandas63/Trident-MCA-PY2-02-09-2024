@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Frequency of each element</title>
+    </head>
+    <body>
+        <h2 style="font-family: Arial, Helvetica, sans-serif;">Count the frequency of each element</h2>
+        <label>Enter the word:</label>
+        <input type="text" id="word">
+        <input type="button" value="Submit" onclick="frequency()">
+        <input type="button" value="Reset" onclick="clearf()">
+        <br><br>
+        <label id="result"></label>
+
+
+        <script>
+            function frequency()
+            {
+                var str=document.getElementById("word").value;
+                for (var i=0;i<str.length;i++)
+                {
+                    var count=1
+                    for (var j=i+1;j<str.length;j++)
+                    {
+                        if (str[i]==str[j])
+                        {
+                            count++;
+                        }
+                    }
+                    if (!str.slice(0, i).includes(str[i])) 
+                    {
+                        result.innerHTML+= str[i] + " = " + count +"<br>";
+                    }        
+                }
+            }
+
+            function clearf()
+            {
+                document.getElementById("word").value="";
+                document.getElementById("result").innerHTML="";
+            }
+
+        </script>
+    </body>
+</html>
