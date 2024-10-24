@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>star printing...</title>
+</head>
+<body>
+    <script>
+        var space=40;
+        var star=1;
+        document.write("<tt>")
+        for (var i=0;i<20;i++){
+            for (var j=0;j<space;j++)
+                document.write("&nbsp;");
+            for (var j=0;j<star;j++)
+                document.write("*");
+            document.write("<br>");
+            if (i<9){
+                space=space-1
+                star=star+2
+            }
+            else{
+                space=space+1
+                star=star-2
+            }      
+        }
+        document.write("<tt>")
+    </script>
+</body>
+</html>
