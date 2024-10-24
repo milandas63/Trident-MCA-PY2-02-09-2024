@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Prime Numbers</title>
+</head>
+<body style="background-color: blanchedalmond;">
+    <h2>CHECK PRIME NUMBER</h2>
+    <p>ENTER THE STARTING NUMBER:</p>
+    <input type="number" id="start">
+    <br>
+    <p>ENTER THE ENDING NUMBER:</p>
+    <input type="number" id="end">
+    <br><br>
+    <input type="button" value="Show Result" onclick="prime()" style="background-color: green; color: white;">
+    <input type="button" value="Reset" onclick="resetForm()" style="background-color: red; color: white; margin-left: 25px;">
+    <br><br>
+    <div id="result" ></div>
+
+    <script>
+        function isPrime(num) {
+            if (num <= 1) return false; 
+            for (let i = 2; i <= Math.sqrt(num); i++) { 
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+
+        function prime() 
+        {
+            let start = parseInt(document.getElementById("start").value);
+            let end = parseInt(document.getElementById("end").value);
+            let count = 0;
+            let output = "";
+
+            for (let i = start; i <= end; i++) 
+            {
+                let countDivisors = 0;
+                for (let j = 1; j <= i; j++) 
+                {
+                    if (i % j === 0) 
+                    {
+                        countDivisors++;
+                    }
+                }
+                if (countDivisors === 2)
+                {
+                    if (count && count % 20 === 0)
+                    { 
+                        output += "<br>";
+                    }
+                    output += i + " "; 
+                    count++;
+                }
+            }
+            if (count > 0)
+            {
+                document.getElementById('result').innerHTML = "Prime numbers: " + output;
+            } 
+            else
+            {
+                document.getElementById('result').innerHTML = "No prime numbers found in this range.";
+            }    
+        }
+
+        function resetForm() 
+        {
+            document.getElementById("start").value = '';
+            document.getElementById("end").value = '';
+            document.getElementById("result").innerHTML = '';
+        }
+    </script>
+</body>
+</html>
