@@ -2567,3 +2567,12 @@ No more data in list
         Edge (Internet Explorer)	Chakra
         Mozilla Firefox	            Spider Monkey
         Safari 	                    Javascript Core Webkit
+
+    =   Write a program to count the number of alphabetic occurances in a text
+    =   Write a program to reverse the text
+    =   Write a program to print the multipication tables between two given numbers
+
+    =   ASSIGNMENT
+        Write a program to print all prime numbers between 2 given numbers
+
+
