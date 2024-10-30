@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script>
+            function count() {
+                var text = document.getElementById("ltext").value;
+                var alphaCount = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+                for(var i=0; i<text.length; i++) {
+                    each = text.charCodeAt(i);
+                    if(each>=65 && each<=90) {
+                        alphaCount[each-65]++;
+                    } else if(each>=97 && each<=122) {
+                        alphaCount[each-97]++;
+                    }
+                }
+                for(var i=0; i<alphaCount.length; i++) {
+                    if(alphaCount[i]>0) {
+                        document.writeln(String.fromCharCode(i+65) + " = " + alphaCount[i] + "<br>");
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h2><u>Alphabet Occurances</u></h2>
+        <br>
+        Enter a line of text<br>
+        <input type="text" id="ltext" size="50">
+        <br><br>
+        <button onclick="count();">Count Occurances</button>
+        <br><br>
+    </body>
+</html>
