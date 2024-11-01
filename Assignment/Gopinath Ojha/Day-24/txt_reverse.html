@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Text reverse</title>
+    </head>
+    <body style="background-color:rgb(160, 160, 218); font-family: Arial, Helvetica, sans-serif;">
+        <center>
+            <h3>Reverse a text</h3>
+        <input type="text" id="txt" placeholder="Enter a text"><br><br>
+        <input type="button" value="Revesre" onclick="rev()"><br><br>
+        <div id="result">....</div>
+        </center>
+        <script>
+            function rev()
+            {
+                var text=document.getElementById("txt").value;
+                var revtxt="";
+                for (var i=text.length-1;i>=0;i--)
+                {
+                    revtxt+=text.charAt(i);
+                }
+                document.getElementById("result").innerHTML = revtxt;
+            }
+        </script>
+        
+    </body>
+</html>
