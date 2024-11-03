@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Prime Numbers</title>
+    <style>
+        .cont {
+            background-color: rgb(43, 14, 161);
+            height: 15rem;
+            width: 25rem;
+            padding-top: 2rem;
+            margin-top: 3rem;
+            border-radius: 25px;
+            box-shadow: 0 0 5px 1px;
+        }
+
+        #result {
+            width: 20rem;
+            min-height: 5rem;
+            background-color: rgb(231, 231, 231);
+            border: 2px solid rgb(31, 56, 138);
+            border-radius: 20px;
+            padding: 10px;
+            margin-top: 1rem;
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #start,#end{
+            height: 1.8rem;
+            width: 15rem;
+            border-radius: 25rem;
+        }
+        #btn
+        {
+            height: 1.9rem;
+            width: 7.5rem;
+            border-radius: 25px;
+        }
+        #btn :hover {
+            color: blue;
+        }
+
+    </style>
+</head>
+
+<body style="background-color: rgb(255, 255, 255);">
+    <center>
+        <div class="cont">
+            <h3 style="font-family: Arial, Helvetica, sans-serif;">CHECK PRIME NUMBER</h3>
+            <input type="number" id="start" placeholder="Enter Starting Number">
+            <br><br>
+            <input type="number" id="end" placeholder="Enter Ending Number">
+            <br><br>
+            <input type="button" value="Result" onclick="prime()" id="btn"
+                style="background-color: green; color: white;">
+            <input type="button" value="Reset" onclick="resetForm()" id="btn"
+                style="background-color: rgb(191, 188, 20); color: white;">
+        </div>
+        <div id="result"></div>
+    </center>
+
+    <script>
+        function prime() {
+            var start = parseInt(document.getElementById("start").value);
+            var end = parseInt(document.getElementById("end").value);
+            document.getElementById("result").innerHTML = ''; 
+            for (var i = start; i <= end; i++) {
+                var count = 0;
+                for (var j = 1; j <= i; j++) {
+                    if (i % j == 0) {
+                        count++;
+                    }
+                }
+                if (count == 2) {
+                    document.getElementById("result").innerHTML += i + " ";
+                }
+            }
+        }
+
+        function resetForm() {
+            document.getElementById("start").value = '';
+            document.getElementById("end").value = '';
+            document.getElementById("result").innerHTML = '';
+        }
+    </script>
+</body>
+
+</html>
