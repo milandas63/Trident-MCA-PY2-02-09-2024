@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cont {
+      background-color: aquamarine;
+      width: 30rem;
+      height: 30rem;
+      display: flex;
+      margin-top: 5rem;
+      justify-content: center;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 5px 0.5px rgb(59, 86, 77);
+      padding-top: 1rem;
+    }
+
+    input[type='text'] {
+      width: 20rem;
+      height: 2rem;
+      font-size: 0.9rem;
+    }
+
+    select {
+      width: 20.4rem;
+      height: 2.3rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    input[type='submit'] {
+      width: 10rem;
+      height: 2rem;
+      background-color: rgb(38, 38, 229);
+      color: white;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    input[type='reset'] {
+      width: 10rem;
+      height: 2rem;
+      background-color: red;
+      color: white;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    p {
+      color: red;
+      font-size: small;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cont">
+    <form action="success.html" onsubmit="return validform()">
+
+      <h2>Student Information System</h2>
+
+      <input type="text" placeholder="Enter Id No." required id="d1">
+      <p id="id-no"></p>
+      <input type="text" placeholder="Enter Your Name" required id="d2">
+      <p id="y-name"></p>
+      <input type="text" placeholder="Enter Your Father's Name" required id="d3">
+      <p id="f-name"></p>
+
+      <select>
+        <option>Highest Qualification</option>
+        <option value="MCA">MCA</option>
+        <option value="M.Tech">M.Tech</option>
+        <option value="BCA">BCA</option>
+        <option value="B.Tech">B.Tech</option>
+        <option value="MBA">MBA</option>
+      </select><br><br>
+
+      <select>
+        <option value="Gender">Enter Your Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Others">Others</option>
+      </select><br><br>
+
+      <select>
+        <option value="">Enter Your Location</option>
+        <option value="Bhubaneswar">Bhubaneswar</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Rajasthan">Rajasthan</option>
+        <option value="Pune">Pune</option>
+      </select><br><br>
+
+
+      <input type="submit" value="Submit">
+
+      <input type="reset" value="Reset">
+
+    </form>
+  </div>
+
+
+  <script>
+    function validform() {
+      const id = document.getElementById("d1").value;
+      const candidateName = document.getElementById("d2").value;
+      const fatherName = document.getElementById("d3").value;
+
+      const idPattern = /^[1-9][0-9]*$/;
+      const namePattern = /^[a-zA-Z\s]+$/;
+
+      if (!idPattern.test(id)) {
+        document.getElementById("id-no").innerText="Id No. must contain only positive number!";
+        return false;
+      }
+      else
+      {
+        true;
+      }
+
+      if (!namePattern.test(candidateName)) {
+        document.getElementById("y-name").innerText="Candidate's name must contain only alphabets!";
+        return false;
+      }
+      else
+      {
+        true;
+      }
+
+      if (!namePattern.test(fatherName)) {
+        document.getElementById("f-name").innerText="Candidate's name must contain only alphabets!";
+        return false;
+      }
+      else
+      {
+        true;
+      }
+
+
+    }
+
+  </script>
+</body>
+
+</html>
