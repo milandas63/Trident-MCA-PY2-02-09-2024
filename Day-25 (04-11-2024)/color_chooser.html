@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Color Chooser</title>
+        <script>
+            function changeColor() {
+                var colorname = document.getElementById('colorlist').value;
+                document.body.bgColor = colorname;
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="color:black; background-color:Cornsilk;font-family:arial;">Color Chooser</h1>
+        <select id="colorlist" size="30" onChange="changeColor();">
+            <option value="">Select</option>
+            <option value="AliceBlue">AliceBlue</option>
+            <option value="AntiqueWhite">AntiqueWhite</option>
+            <option value="Aqua">Aqua</option>
+            <option value="Aquamarine">Aquamarine</option>
+            <option value="Azure">Azure</option>
+            <option value="Beige">Beige</option>
+            <option value="Bisque">Bisque</option>
+            <option value="Black">Black</option>
+            <option value="BlanchedAlmond">BlanchedAlmond</option>
+            <option value="Blue">Blue</option>
+            <option value="BlueViolet">BlueViolet</option>
+            <option value="Brown">Brown</option>
+            <option value="BurlyWood">BurlyWood</option>
+            <option value="CadetBlue">CadetBlue</option>
+            <option value="Chartreuse">Chartreuse</option>
+            <option value="Chocolate">Chocolate</option>
+            <option value="Coral">Coral</option>
+            <option value="CornflowerBlue">CornflowerBlue</option>
+            <option value="Cornsilk">Cornsilk</option>
+        </select>
+    </body>
+</html>
