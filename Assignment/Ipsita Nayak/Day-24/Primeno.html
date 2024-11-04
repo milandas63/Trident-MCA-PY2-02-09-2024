@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prime Number Tables</title>
+    <script>
+        function isPrime(num) {
+            if (num <= 1) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+
+        function tables() {
+            var start = parseInt(document.getElementById("start").value);
+            var end = parseInt(document.getElementById("end").value);
+            var count = 0;
+            var output = "<h2>Prime Numbers from " + start + " to " + end + "</h2><table border='1'><tr>";
+
+            for (var i = start; i <= end; i++) {
+                if (isPrime(i)) {
+                    output += "<td>" + i + "</td>";
+                    count++;
+                    if (count % 10 === 0) output += "</tr><tr>";
+                }
+            }
+
+            output += "</tr></table>";
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+</head>
+
+<body>
+    <h2><u>Prime Number Tables</u></h2>
+    <table>
+        <tr>
+            <td>Start Number:</td>
+            <td><input type="text" id="start" size="20"></td>
+        </tr>
+        <tr>
+            <td>End Number:</td>
+            <td><input type="text" id="end" size="20"></td>
+        </tr>
+    </table>
+    <br>
+    <button onclick="tables();">Show Prime Numbers</button>
+    <br><br>
+    <div id="result"></div>
+</body>
+
+</html>
