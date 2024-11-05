@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            border: 2px solid #333;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        select {
+            width: 50%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+    <title>Student Registration</title>
+    <script>
+        function saveButton() {
+            alert("Saved Successfully!");
+        }
+
+        function exitButton() {
+            alert("Exiting the form");
+            window.close();
+        }
+
+        function validateName(fieldId) {
+            const name = document.getElementById(fieldId).value;
+            const letters = /^[A-Za-z\s]+$/;
+
+            if (!letters.test(name)) {
+                alert("Please enter only alphabets in " + (fieldId === "candidateName" ? "Candidate's Name" : "Father's Name"));
+                document.getElementById(fieldId).value = "";
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body bgcolor="powderblue">
+    <h1>
+        <center>STUDENT INFO SYSTEM</center>
+    </h1>
+    <form action=" ">
+        <table class="center">
+            <tr>
+                <td>ID No:</td>
+                <td><input type="number" name="txtidno" required></td>
+            </tr>
+
+            <tr>
+                <td>Candidate's Name:</td>
+                <td><input type="text" name="txtcandidatesname" id="candidateName" onblur="validateName('candidateName')" required></td>
+            </tr>
+
+            <tr>
+                <td>Father's Name:</td>
+                <td><input type="text" name="txtfathersname" id="fatherName" onblur="validateName('fatherName')" required></td>
+            </tr>
+
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" value="Male" name="gender" required>Male
+                    <input type="radio" value="Female" name="gender" required>Female
+                </td>
+            </tr>
+
+            <tr>
+                <td>Date of Birth:</td>
+                <td><input type="date" name="txtdateofbirth" required></td>
+            </tr>
+
+            <tr>
+                <td>Higher Qualification:</td>
+                <td>
+                    <select name="HigherQualification" required>
+                        <option value="">---SELECT---</option>
+                        <option value="10th">10</option>
+                        <option value="12th">12</option>
+                        <option value="MCA">MCA</option>
+                        <option value="BCA">BCA</option>
+                        <option value="BSc">BSc</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Location:</td>
+                <td>
+                    <select name="Location" required>
+                        <option value="">---SELECT---</option>
+                        <option value="BBSR">BBSR</option>
+                        <option value="KDP">KDP</option>
+                        <option value="CTC">CTC</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr class="button-container">
+                <td colspan="2">
+                    <button type="button" onclick="saveButton();">Save</button>
+                    <button type="button" onclick="exitButton();">Exit</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
