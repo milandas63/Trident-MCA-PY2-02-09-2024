@@ -1,1 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #083846;
+            height: 300px;
+            width: 450px;
+            border-radius: 5px;
+            padding: 20px;
+            color: burlywood;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px;
+        }
+
+        th,
+        td {
+            padding: 5px;
+            text-align: left;
+        }
+
+        button {
+            margin-top: 15px;
+            height: 2rem;
+            width: 4rem;
+        }
+
+        div {
+            background-color: #083846;
+            padding: 20px;
+            border-radius: 8px;
+            width: 600px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div>
+        <center>
+            <table>
+                <h2>STUDENT INFORMATION SYSTEM </h2>
+                <tr>
+                    <th>ID No:</th>
+                    <td><input type="number"></td>
+                </tr>
+
+                <tr>
+                    <th>CANDIDATES NAME:</th>
+                    <td><input type="text" id="textOnlyField"></td>
+                </tr>
+
+                <tr>
+                    <th>FATHER NAME:</th>
+                    <td><input type="text" id="textOnlyField2"></td>
+                </tr>
+
+                <tr>
+                    <th>Gender:</th>
+                    <td>
+                        <input type="radio" name="Gender">Male
+                        <input type="radio" name="Gender">Female
+                        <input type="radio" name="Gender">Others
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>DATE OF BIRTH:</th>
+                    <td><input type="date"></td>
+                </tr>
+
+                <tr>
+                    <th>HIGHEST QUALIFICATION:</th>
+                    <td>
+                        <select>
+                            <option>Select</option>
+                            <option>B.Sc</option>
+                            <option>M.Sc</option>
+                            <option>MCA</option>
+                            <option>MBA</option>
+                            <option>M.Tech</option>
+                            <option>B.Tech</option>
+                            <option>10TH</option>
+                            <option>+2</option>
+                            <option>B.Tech</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>LOCATION:</th>
+                    <td>
+                        <select>
+                            <option>Select</option>
+                            <option>Bhubaneswar</option>
+                            <option>Pune</option>
+                            <option>Mumbai</option>
+                            <option>Delhi</option>
+                            <option>Bangalore</option>
+                            <option>Gurgaon</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <button style="background-color: rgb(176, 200, 23); color: white;">Save</button>
+            <button style="background-color: red; color: white;">Exit</button>
+        </center>
+    </div>
+
+    <script>
+    document.getElementById("textOnlyField").addEventListener("input", function (event) {
+    event.target.value = event.target.value.replace(/[^a-zA-Z]/g, '');
+});
+
+document.getElementById("textOnlyField2").addEventListener("input", function (event) {
+    event.target.value = event.target.value.replace(/[^a-zA-Z]/g, '');
+});
+  
+    </script>
+</body>
+
+</html>
