@@ -2689,4 +2689,6 @@ No more data in list
         horizontally and vertically.
         Reference: reverse_table.html
 
+    =   Add a delete column to a table. Each row should have a delete button. On clicking
+        the delete button, the corresponding row will be deleted.
 
