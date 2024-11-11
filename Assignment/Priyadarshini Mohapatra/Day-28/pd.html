@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <title>USA PRESIDENT TABLE</title>
+    <script>
+        function reverse() {
+            var tabObj = document.getElementById("table");
+            document.writeln("<html><body><table border='1'>");
+
+            document.writeln("<tr>");
+            for (var i = tabObj.rows[0].cells.length-1; i >= 0; i--) {
+                document.writeln("<th>" + tabObj.rows[0].cells[i].innerHTML + "</th>");
+            }
+            document.writeln("</tr>");
+
+            for (var i=1; i<tabObj.rows.length; i++) {
+                document.writeln("<tr>");
+                    for (var j = tabObj.rows[i].cells.length-1; j>=0; j--) {
+                    document.writeln("<td>" + tabObj.rows[i].cells[j].innerHTML + "</td>");
+                }
+                document.writeln("<tr>");
+            }
+
+
+            document.writeln("</tr>");
+            document.writeln("reversedTable").innerHTML = document.writeln;
+        }
+        function deleteRow(button) {
+                button.closest("tr").remove();
+        }
+    </script>
+</head>
+
+<body>
+    <h1>President Information</h1>
+    <table border="1" id="table">
+        <tr>
+            <th>SLNO</th>
+            <th>PRESIDENT NAME</th>
+            <th>GENDER</th>
+            <th>YEAR</th>
+            <th>DELETE</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Bill Clinton</td>
+            <td>Male</td>
+            <td>1993</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>George W. Bush</td>
+            <td>Male</td>
+            <td>2001</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Barack Obama</td>
+            <td>Male</td>
+            <td>2009</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Donald Trump</td>
+            <td>Male</td>
+            <td>2017</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Joe Biden</td>
+            <td>Male</td>
+            <td>2021</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        </tr>
+    </table>
+    <br><br>
+    <button onclick="reverse();">Reverse</button>
+
+    <div id="reversedTable">
+
+    </div>
+</body>
+
+</html>
