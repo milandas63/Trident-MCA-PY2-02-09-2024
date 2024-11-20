@@ -50,3 +50,10 @@ mysql> select * from inoculation;
 |              8 | Yello Fever      | YF               |
 |              9 | Covid-19         | CV               |
 +----------------+--
+
+
+
+select student.roll_no, student.student_name,class.class_desc, student.section_id,inoculation.inoculation_desc
+        from student
+        left join class on student.class_id=class.class_id
+        left join inoculation on student.inoculation_id=inoculation.inoculation_id
