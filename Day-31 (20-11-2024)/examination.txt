@@ -1,0 +1,64 @@
+
+
+    =   EVALUATION - EXAMINATION
+
+    =   Create a dot sql file in which create a set of tables connected to student
+        information system.
+        1.  student
+            +---------+------------------------+----------+------------+----------------+
+            | roll_no | student_name           | class_id | section_id | inoculation_id |
+            +---------+------------------------+----------+------------+----------------+
+            |      1  |                        |          |            |                |
+            |      2  |                        |          |            |                |
+            |      3  |                        |          |            |                |
+            |      4  |                        |          |            |                |
+            |      5  |                        |          |            |                |
+            |      6  |                        |          |            |                |
+            |      7  |                        |          |            |                |
+            |      8  |                        |          |            |                |
+            |      9  |                        |          |            |                |
+
+        2.  class
+            +----------+--------------------+-------------+-------------+--------------------+
+            | class_id | class_desc         | class_roman | class_digit | class_words        |
+            +----------+--------------------+-------------+-------------+--------------------+
+            |        1 | Select             | NULL        |        NULL | NULL               |
+            |        2 | Lower Kindergarten | LKG         |          -2 | Lower Kindergarten |
+            |        3 | Upper Kindergarten | UKG         |          -1 | Upper Kindergarten |
+            |        4 | Class I            | I           |           1 | First              |
+            |        5 | Class II           | II          |           2 | Second             |
+            |        6 | Class III          | III         |           3 | Third              |
+            |        7 | Class IV           | IV          |           4 | Fourth             |
+            |        8 | Class V            | V           |           5 | Fifth              |
+            |        9 | Class VI           | VI          |           6 | Sixth              |
+            |       10 | Class VII          | VII         |           7 | Seventh            |
+            |       11 | Class VIII         | VIII        |           8 | Eighth             |
+            |       12 | Class IX           | IX          |           9 | Ninth              |
+            |       13 | Class X            | X           |          10 | Tenth              |
+            |       14 | Class XI           | XI          |          11 | Eleventh           |
+            |       15 | Class XII          | XII         |          12 | Twelfth            |
+            +----------+--------------------+-------------+-------------+--------------------+
+
+        3   inoculation
+            +----------------+------------------+------------------+
+            | inoculation_id | inoculation_desc | inoculation_abbr |
+            +----------------+------------------+------------------+
+            |              1 | Triple Antigen   | TA               |
+            |              2 | Polio            | PO               |
+            |              3 | BCG              | BCG              |
+            |              4 | Cholera          | CL               |
+            |              5 | Small Pox        | SP               |
+            |              6 | Typhoid          | TY               |
+            |              7 | Measles          | ME               |
+            |              8 | Yello Fever      | YF               |
+            |              9 | Covid-19         | CV               |
+            +----------------+------------------+------------------+
+
+    =   Write an SQL SELECT statement to retrieve the following data joining the above tables.
+        +---------+------------------------+------------+------------+------------------+
+        | roll_no | student_name           | class_desc | section_id | inoculation_desc |
+        +---------+------------------------+------------+------------+------------------+
+        |         |                        |            |            |                  |
+
+    =   Write a Python program to print the above data (sql) from MySQL database.
+
