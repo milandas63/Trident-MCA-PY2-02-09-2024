@@ -1,0 +1,208 @@
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| con_db             |
+| contact            |
+| contact_db         |
+| db1                |
+| db_contact         |
+| ihub               |
+| my_db              |
+| mysql              |
+| mytest2            |
+| performance_schema |
+| pythontest         |
+| student            |
+| studentinfo        |
+| styd               |
+| test               |
+| trident            |
++--------------------+
+17 rows in set (0.01 sec)
+
+mysql> use studentinfo;
+Database changed
+mysql> show tables;
++-----------------------+
+| Tables_in_studentinfo |
++-----------------------+
+| class                 |
+| inoculation           |
+| student               |
++-----------------------+
+3 rows in set (0.00 sec)
+
+mysql> desc class;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| class_id    | int(10)     | NO   |     | NULL    |       |
+| class_desc  | varchar(10) | NO   | PRI | NULL    |       |
+| class_roman | varchar(8)  | NO   |     | NULL    |       |
+| class_digit | varchar(8)  | NO   |     | NULL    |       |
+| class_words | varchar(10) | NO   |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+5 rows in set (0.02 sec)
+
+mysql> desc inoculation;
++------------------+-------------+------+-----+---------+-------+
+| Field            | Type        | Null | Key | Default | Extra |
++------------------+-------------+------+-----+---------+-------+
+| inoculation_id   | int(8)      | NO   |     | NULL    |       |
+| inoculation_desc | varchar(12) | YES  |     | NULL    |       |
+| inoculation_abbr | varchar(5)  | NO   | PRI |         |       |
++------------------+-------------+------+-----+---------+-------+
+3 rows in set (0.02 sec)
+
+mysql> desc student;
++----------------+-------------+------+-----+---------+----------------+
+| Field          | Type        | Null | Key | Default | Extra          |
++----------------+-------------+------+-----+---------+----------------+
+| roll_no        | int(6)      | NO   |     | NULL    |                |
+| student_name   | varchar(20) | NO   | UNI | NULL    |                |
+| class_id       | int(10)     | NO   |     | NULL    |                |
+| section_id     | int(10)     | NO   | PRI | NULL    | auto_increment |
+| inoculation_id | int(10)     | NO   |     | NULL    |                |
++----------------+-------------+------+-----+---------+----------------+
+5 rows in set (0.01 sec)
+
+mysql> select*from student;
++---------+-----------------+----------+------------+----------------+
+| roll_no | student_name    | class_id | section_id | inoculation_id |
++---------+-----------------+----------+------------+----------------+
+|       1 | Ipsita          |        1 |          1 |              1 |
+|       2 | Hara            |        2 |          2 |              2 |
+|       3 | Priya           |        3 |          3 |              3 |
+|       4 | Gopi            |        4 |          4 |              4 |
+|       5 | Abhi            |        5 |          5 |              5 |
+|       6 | Dibya           |        6 |          6 |              6 |
+|       7 | srikant         |        7 |          7 |              7 |
+|       8 | bijay           |        8 |          8 |              8 |
+|       9 | Jagan           |        9 |          9 |              9 |
+|       1 | Ipsita Nayak    |        1 |         11 |              1 |
+|       2 | Harapriya Panda |        2 |         12 |              2 |
++---------+-----------------+----------+------------+----------------+
+11 rows in set (0.00 sec)
+
+mysql> select*from class;
+Empty set (0.00 sec)
+
+mysql> insert into class values
+    -> (1,'select','NULL','NULL','NULL'),
+    -> (2,'Lower Kindergarten','LKG','-2','Lower kindergarten'),
+    -> (3,'Upper Kindergarten','UKG','-1','Upper kindergarten'),
+    -> (4,'Class I','I','1','First'),
+    -> (5,'Class II','II','2','second'),
+    -> (6,'Class III','III','3','tHIRD'),
+    -> (7,'Class IV','IV','4','Fourth'),
+    -> (8,'Class V','V','5','Fifth'),
+    -> (9,'Class VI','VI','6','Sixth'),
+    -> (10,'Class VII','VII','7','Seventh'),
+    -> (11,'Class VIII','VIII','8','Eight'),
+    -> (12,'Class IX','IX','9','Ninth'),
+    -> (13,'Class X','X','10','Tenth'),
+    -> (14,'Class XI','XI','11','Eleventh'),
+    -> (15,'Class XII','XII','12','Twelfth');
+ERROR 1406 (22001): Data too long for column 'class_desc' at row 2
+mysql> insert into class values
+    -> (1,'select','NULL','NULL','NULL'),
+    -> (2,'LKindergarten','LKG','-2','Lkindergarten'),
+    -> (3,'UKindergarten','UKG','-1','Ukindergarten'),
+    -> (4,'Class I','I','1','First'),
+    -> (5,'Class II','II','2','second'),
+    -> (6,'Class III','III','3','tHIRD'),
+    -> (7,'Class IV','IV','4','Fourth'),
+    -> (8,'Class V','V','5','Fifth'),
+    -> (9,'Class VI','VI','6','Sixth'),
+    -> (10,'Class VII','VII','7','Seventh'),
+    -> (11,'Class VIII','VIII','8','Eight'),
+    -> (12,'Class IX','IX','9','Ninth'),
+    -> (13,'Class X','X','10','Tenth'),
+    -> (14,'Class XI','XI','11','Eleventh'),
+    -> (15,'Class XII','XII','12','Twelfth');
+ERROR 1406 (22001): Data too long for column 'class_desc' at row 2
+mysql> insert into class values
+    -> (2,'LKin','LKG','-2','Lkin'),
+    -> (3,'UKin','UKG','-1','Ukin'),
+    -> (4,'Class I','I','1','First'),
+    -> (5,'Class II','II','2','second'),
+    -> (6,'Class III','III','3','tHIRD'),
+    -> (7,'Class IV','IV','4','Fourth'),
+    -> (8,'Class V','V','5','Fifth'),
+    -> (9,'Class VI','VI','6','Sixth'),
+    -> (10,'Class VII','VII','7','Seventh'),
+    -> (11,'Class VIII','VIII','8','Eight'),
+    -> (12,'Class IX','IX','9','Ninth'),
+    -> (13,'Class X','X','10','Tenth'),
+    -> (14,'Class XI','XI','11','Eleventh'),
+    -> (15,'Class XII','XII','12','Twelfth');
+Query OK, 14 rows affected (0.01 sec)
+Records: 14  Duplicates: 0  Warnings: 0
+
+mysql> insert into inoculation values
+    -> (1,'Triple Antigen','TA'),
+    -> (2,'Polio','PO'),
+    -> (3,'BCG','BCG'),
+    -> (4,'Cholera','CL'),
+    -> (5,'small pox','SP'),
+    -> (6,'Typhoid','TY'),
+    -> (7,'Measles','ME'),
+    -> (8,'Yello Fever','YF'),
+    -> (9,'Covid-19','CV');
+ERROR 1406 (22001): Data too long for column 'inoculation_desc' at row 1
+mysql> insert into inoculation values
+    -> (1,'TAntigen','TA'),
+    -> (2,'Polio','PO'),
+    -> (3,'BCG','BCG'),
+    -> (4,'Cholera','CL'),
+    -> (5,'small pox','SP'),
+    -> (6,'Typhoid','TY'),
+    -> (7,'Measles','ME'),
+    -> (8,'Yello Fever','YF'),
+    -> (9,'Covid-19','CV');
+Query OK, 9 rows affected (0.00 sec)
+Records: 9  Duplicates: 0  Warnings: 0
+
+mysql> select*from inoculation;
++----------------+------------------+------------------+
+| inoculation_id | inoculation_desc | inoculation_abbr |
++----------------+------------------+------------------+
+|              3 | BCG              | BCG              |
+|              4 | Cholera          | CL               |
+|              9 | Covid-19         | CV               |
+|              7 | Measles          | ME               |
+|              2 | Polio            | PO               |
+|              5 | small pox        | SP               |
+|              1 | TAntigen         | TA               |
+|              6 | Typhoid          | TY               |
+|              8 | Yello Fever      | YF               |
++----------------+------------------+------------------+
+9 rows in set (0.00 sec)
+
+mysql> SELECT r.rollno AS 'RL',r.student_name AS 'sn',r.class_id AS 'cid',r.section_id AS 'sid',c.class_desc AS 'class',i.inoculation_desc AS'inoculation' FROM student AS r
+    -> LEFT JOIN class AS c ON
+    -> /;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/' at line 3
+mysql> select student.roll_no, student.student_name,class.class_desc, student.section_id,inoculation.inoculation_desc
+    ->         from student
+    ->         left join class on student.class_id=class.class_id
+    ->         left join inoculation on student.inoculation_id=inoculation.inoculation_id;
++---------+-----------------+------------+------------+------------------+
+| roll_no | student_name    | class_desc | section_id | inoculation_desc |
++---------+-----------------+------------+------------+------------------+
+|       1 | Ipsita          | NULL       |          1 | TAntigen         |
+|       2 | Hara            | LKin       |          2 | Polio            |
+|       3 | Priya           | UKin       |          3 | BCG              |
+|       4 | Gopi            | Class I    |          4 | Cholera          |
+|       5 | Abhi            | Class II   |          5 | small pox        |
+|       6 | Dibya           | Class III  |          6 | Typhoid          |
+|       7 | srikant         | Class IV   |          7 | Measles          |
+|       8 | bijay           | Class V    |          8 | Yello Fever      |
+|       9 | Jagan           | Class VI   |          9 | Covid-19         |
+|       1 | Ipsita Nayak    | NULL       |         11 | TAntigen         |
+|       2 | Harapriya Panda | LKin       |         12 | Polio            |
++---------+-----------------+------------+------------+------------------+
+11 rows in set (0.01 sec)
