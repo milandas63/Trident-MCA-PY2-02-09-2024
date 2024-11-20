@@ -72,8 +72,8 @@ INSERT INTO inoculation VALUES
      (9,'COVID-19','CV');
 
 SELECT s.rool_no AS 'Roll_no', s.student_name AS 'Student_name', c.class_desc AS 'Class_desc', s.section_id AS 'Section_id' , i.inoculation_desc AS 'Inoculation_id' FROM student AS s
-LEFT JOIN s.class_desc=c.class_desc
-LEFT JOIN s.inoculation=i.inoculation_desc;
+LEFT JOIN  class AS c ON s.class_desc =c.class_desc
+LEFT JOIN  inoculation AS i ON s.inoculation_desc =i.inoculation_desc;
 
 
       
